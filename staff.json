@@ -1,0 +1,7 @@
+[
+  {"id":1, "nombre": "Dra Carina Guzman", "honorarios": 2000, "servicio": "Pediatria","imagen":"/img/Carina-Guzman.png", "fecha": "", "hora": "" },
+  {"id":2, "nombre": "Dra Tatiana Rodrigo", "honorarios": 3000, "servicio": "Neurocirugía","imagen":"/img/Tatiana-Rodrigo.png", "fecha": "", "hora": "" },
+  {"id":3, "nombre": "Dra Carolina Balduzzi", "honorarios": 2000, "servicio": "Gastroenterología", "imagen":"/img/Carolina-Balduzzi.png", "fecha": "", "hora": "" },
+  {"id":4, "nombre": "Dr Hugo Moreno", "honorarios": 3000, "servicio": "Cirugía","imagen":"/img/Hugo-Moreno.png", "fecha": "", "hora": "" },
+  {"id":5, "nombre": "Dr Florencio Sanchez", "honorarios": 2500, "servicio": "Traumatología","imagen":"/img/Florencio-Sanchez.png", "fecha": "", "hora": "" }
+]
