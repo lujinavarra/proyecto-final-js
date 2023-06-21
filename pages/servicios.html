@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preentrega</title>
+    <title>Centro de Salud Integral- Proyecto final JS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
@@ -22,27 +22,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./sacar-turno.html">Agendar Turno</a>
+                            <a class="nav-link active" aria-current="page" href="./sacar-turno.html">Agendar Turno<a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ingresar</a>
+                            <a class="nav-link" href="./ingresar.html">Ingresar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" tabindex="-1"><button id="profesionales"> Ver profesionales</button></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./sacar-turno.html"><button disabled="disabled"
-                                    id="sacarTurno">Solicitar Turno</button></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./servicios.html"><img class="turnos" src="../img/calendario.png"
-                                    alt=""></a>
+                            <a class="nav-link" href="./servicios.html"><img class="turnos" src="../img/calendario.png" alt=""></a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -50,13 +38,13 @@
     <h2>Turnos Agendados</h2>
     <div id="turnoAgendado"></div>
     <div id="mostrarTotal"></div>
-    <script src="../index.js" type="module">
-        import {traerProfesionales} from "../index.js"
+    <script src="../js/index.js" type="module">
+        import {traerProfesionales} from "../js/index.js"
     </script>
-    <script src="../formulario.js" type="module">
-        import { paciente1 } from "../formulario.js"
+    <script src="../js/formulario.js" type="module">
+        import { paciente1 } from "../js/formulario.js"
     </script>
-    <script type="module" src="../turnos.js"></script>
+    <script type="module" src="../js/turnos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../node_modules/moment/moment.js"> </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
