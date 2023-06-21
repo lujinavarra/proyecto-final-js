@@ -35,12 +35,29 @@ mostrarTurnosAgendados(turnosAgendados);
 let botonesEliminar= document.querySelectorAll(".eliminar");
 Array.from(botonesEliminar).forEach(function(boton, indice){
     boton.addEventListener("click", ()=>{
-        let indiceTurno = turnosAgendados[indice];
-        turnosAgendados.splice(indice, 1);
-        localStorage.setItem("turno", JSON.stringify(turnosAgendados));
-        location.reload();
-        mostrarTurnosAgendados(turnosAgendados);
-    })
+        Swal.fire({
+            title: '¿Esta seguro de eliminar el turno?',
+            text: "No va a poder revertir esta opción",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Si, lo elimino'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                let indiceTurno = turnosAgendados[indice];
+                turnosAgendados.splice(indice, 1);
+                localStorage.setItem("turno", JSON.stringify(turnosAgendados));
+                location.reload();
+                mostrarTurnosAgendados(turnosAgendados);
+                Swal.fire(
+                    'Turno Eliminado',
+                    'Su turno ha sido eliminado.',
+                    'success'
+                )
+        }})
+})
 });
 
 //función para mostrar el resumen de los turnos
