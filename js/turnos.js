@@ -1,12 +1,13 @@
-
+//comienzo trayendo del localstorage los turnos y el paciente cargados previamente
 let paciente1LS= localStorage.getItem("paciente1");
 let turneroLS= localStorage.getItem("turno");
 let turnosAgendados = [];
-turneroLS ? turnosAgendados=JSON.parse(turneroLS): turnosAgendados =[];
+turneroLS ? turnosAgendados=JSON.parse(turneroLS): turnosAgendados =[];//igual que en el archivo anterior, evalúo si hay turnos en el localstorage, caso contrario se inicializa en cero
 let paciente1=JSON.parse(paciente1LS);
-console.log(turnosAgendados);
-let turnosAgendadosDom = document.getElementById("turnoAgendado");
 
+//traigo elementos del html para interaccionar con el dom
+let turnosAgendadosDom = document.getElementById("turnoAgendado");
+//muestro los turnos agendados, y en caso de existir muestro el resumen de pago
 function mostrarTurnosAgendados(turnero){  
     turnero.forEach(item => {
         let turnoAgendado = document.createElement("div");
@@ -24,12 +25,13 @@ function mostrarTurnosAgendados(turnero){
     });
     if (turnero.length>0){
         confirmarTurnos();
-    }else{
     }
 }
 
 mostrarTurnosAgendados(turnosAgendados);
 
+//botones
+//botón para eliminar un turno en particular
 let botonesEliminar= document.querySelectorAll(".eliminar");
 Array.from(botonesEliminar).forEach(function(boton, indice){
     boton.addEventListener("click", ()=>{
@@ -41,6 +43,7 @@ Array.from(botonesEliminar).forEach(function(boton, indice){
     })
 });
 
+//función para mostrar el resumen de los turnos
 function confirmarTurnos(){
     let mostrarTotal=document.getElementById("mostrarTotal");
     let confirmacion=document.createElement("div");
@@ -58,6 +61,7 @@ function confirmarTurnos(){
     calcularTotal();
 };
 
+//con esta función calculo el total a pagar
 function calcularTotal(){
     let total = 0;
     turnosAgendados.forEach(turno =>{
@@ -67,6 +71,7 @@ function calcularTotal(){
     totalAMostrar.innerHTML=`El total a abonar es $ ${total}`;
 };
 
+//función para eliminar todos los turnos seleccionados
 function eliminarTurnos(){
     let eliminarTurnos=document.getElementById("eliminarTurnos");
     eliminarTurnos.addEventListener("click", ()=>{
@@ -81,7 +86,7 @@ function eliminarTurnos(){
             confirmButtonText: 'Si, los elimino'
         }).then((result) => {
             if (result.isConfirmed) {
-                localStorage.clear("turno");
+                localStorage.clear("turno");//si confirma la eliminacion vacío el local storage y el html también
                 turnosAgendadosDom.innerHTML = "";
                 let confirmacion = document.getElementsByClassName("confirmacion");
                 confirmacion.innerHTML = "";
@@ -99,6 +104,7 @@ function eliminarTurnos(){
 }
 eliminarTurnos();
 
+//botón para agregar un turno más
 let agregarTurno=document.getElementById("agregarTurno");
 agregarTurno.addEventListener("click", ()=>{
     setTimeout(function () {
@@ -106,6 +112,7 @@ agregarTurno.addEventListener("click", ()=>{
     }, 1000);
 });
 
+//botón para confirmar el turno
 let confirmarTurno=document.getElementById("confirmarTurnos");
 confirmarTurno.addEventListener("click", ()=>{
     Swal.fire({
