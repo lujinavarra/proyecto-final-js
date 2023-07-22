@@ -113,3 +113,26 @@ input, select{
     margin: 2px;
     font-size: 0.9em;
 }
+
+.pie{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    margin: 20px;
+}
+
+.pie h3{
+    font-size: 16px;
+}
+.redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    width: 20px;
+    height: 20px;
+}
