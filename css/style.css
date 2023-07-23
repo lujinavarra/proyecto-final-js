@@ -3,6 +3,10 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 40px;
+    height: 100%;
+}
+main{
+    min-height: 80%;
 }
 
 .logo, .turnos{
@@ -113,20 +117,42 @@ input, select{
     margin: 2px;
     font-size: 0.9em;
 }
+footer div span{
+    font-size: 16px;
+}
 
-.pie{
+footer div span font{
+    color: black;
+}
+
+footer{
+    margin: 24px;
+    bottom: 0%;
+    align-self: flex-end;
+    flex-shrink: 0;
+}
+/* .pie{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 45%;
     margin: 20px;
+    margin-left: 350px;
 }
 
 .pie h3{
     font-size: 16px;
+    padding: 0;
+} */
+/* .redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
 }
-.redes{
+.copy{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -135,4 +161,11 @@ input, select{
 .copyright{
     width: 20px;
     height: 20px;
+    margin: 2px;
+} */
+.github{
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    margin-bottom: 35px;
 }
