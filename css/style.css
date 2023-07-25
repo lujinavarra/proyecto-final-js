@@ -5,8 +5,8 @@ body{
     font-size: 40px;
     height: 100%;
 }
-main{
-    min-height: 80%;
+.main{
+    height: 80%;
 }
 
 .logo, .turnos{
@@ -27,7 +27,13 @@ h1, h2, p, h3{
     padding: 0.25em;
     margin: 0.25em;
 }
+p{
+    margin-bottom: 1em;
+}
 
+.p{
+    font-size: 0.8em;
+}
 .diapo{
     width: 70%;
     height: 70%;
@@ -45,7 +51,12 @@ button{
     flex-direction: column;
     font-size: 0.63em;
 }
-
+.profesionales{
+    height: 70vh;
+}
+.form-select{
+    padding-bottom: 2px;
+}
 .cards{
     margin: 5px 5px;
     padding: 5px;
@@ -61,16 +72,17 @@ button{
 .profesionales1, .confirmacion{
    display: flex;
    flex-direction: row;
-   margin: 5px 5%;
-   justify-content: space-around;
+   margin: 5px;
+   justify-content:flex-start;
    padding: 5px;
    font-size: 0.5em;
-   height: 40vh;
+   max-height: 85vh;
    border:black 2px solid;
    border-radius: 2%;
    -webkit-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 5px 5px 0px rgba(0,0,0,0.75);
+    flex-wrap: wrap;
 }
 
 .confirmacion{
@@ -78,7 +90,7 @@ button{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 15vh;
+    max-height: 30vh; 
 }
 .botonesTurnos{
     font-size: 0.7em;
@@ -100,7 +112,7 @@ button{
     height: 50%;
 }
 .fotosProfesionales1{
-    width: 25vw;
+    width: 20vw;
     height: 30vh;
 }
 .contenedorProfesionales{

@@ -15,11 +15,11 @@ function mostrarTurnosAgendados(turnero){
         turnoAgendado.innerHTML= `
         <img class="fotosProfesionales1" src="${item.imagen}">
         <h3>Especialidad de ${item.servicio}</h3>
-        <p>${item.nombre}</p>
-        <p>Honorarios a abonar: $${item.honorarios}</p>
-        <p>Fecha: ${item.fecha}</p>
-        <p>Hora: ${item.hora}</p>
-        <button id="${item.id}" class="eliminar">Eliminar</button>
+        <p class="p">${item.nombre}</p>
+        <p class="p">Honorarios a abonar: $${item.honorarios}</p>
+        <p class="p">Fecha: ${item.fecha}</p>
+        <p class="p">Hora: ${item.hora}</p>
+        <button id="${item.id}" class="eliminar btn btn-danger">Eliminar</button>
         `;
         turnosAgendadosDom.appendChild(turnoAgendado);
     });
@@ -70,9 +70,9 @@ function confirmarTurnos(){
         <p id="totalTurnos"> El total a abonar es $ </p>
         </div>
         <div class="botonesTurnos">
-        <button id="eliminarTurnos">Eliminar todos los turnos</button>
-        <button id="confirmarTurnos">Confirmar Turnos</button>
-        <button id ="agregarTurno"> ¿Desea solicitar otro turno ? </button>
+        <button id="eliminarTurnos" class="btn btn-danger">Eliminar todos los turnos</button>
+        <button id="confirmarTurnos" class="btn btn-success">Confirmar Turnos</button>
+        <button id ="agregarTurno" class="btn btn-info"> ¿Desea solicitar otro turno ? </button>
         </div> `;
     mostrarTotal.appendChild(confirmacion);
     calcularTotal();
