@@ -1,9 +1,12 @@
+
 body{
     background-image: url("../img/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 40px;
-    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 3.5em;
 }
 .main{
     height: 80%;
@@ -138,43 +141,11 @@ footer div span font{
 }
 
 footer{
-    margin: 24px;
-    bottom: 0%;
-    align-self: flex-end;
-    flex-shrink: 0;
-}
-/* .pie{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    margin: 20px;
-    margin-left: 350px;
+   position: absolute;
+   bottom: 0;
+   width: 95%;
 }
 
-.pie h3{
-    font-size: 16px;
-    padding: 0;
-} */
-/* .redes{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 2px;
-}
-.copy{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.copyright{
-    width: 20px;
-    height: 20px;
-    margin: 2px;
-} */
 .github{
     width: 20px;
     height: 20px;
